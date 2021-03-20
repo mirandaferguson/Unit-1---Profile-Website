@@ -1,0 +1,271 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #222;
+  background: #ebe4ea;
+}
+
+/* Link Styles */
+a {
+  text-decoration: underline;
+  color: #ac88a6;
+}
+
+a:hover {
+  color: #5f425b;
+}
+
+/* Nav Styles */
+.main-nav {
+  width: 100%;
+  background: black;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav .name {
+  display: block;
+  margin-right: auto;
+  color: white;
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+
+.nav a {
+  transition: all 0.5s;
+  color: #999;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+.nav a.current {
+  color: #e0b1d9;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  background: url("images/hero.png") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+  line-height: 1.5;
+}
+
+header .profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 0.5s;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+header .profile-image:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.tag {
+  background-color: #efefef;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+}
+
+.location {
+  background-color: #efefef;
+  color: black;
+}
+
+/* Typography */
+h2 {
+  text-align: center;
+}
+
+/* Home Page Styles */
+.card {
+  flex: 1;
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 500px;
+  text-align: left;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  border-color: #e0b1d9;
+}
+
+ul.skills {
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #797678;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.skills li:nth-child(odd) {
+  background: #e0b1d9;
+}
+
+/* Experience Page Styles */
+.project {
+  margin: 30px;
+  max-width: 500px;
+  flex: 1;
+}
+
+.project img {
+  border-radius: 6px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  font-size: 0.75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+a.github {
+  background-image: url(images/github.svg);
+}
+a.social:hover {
+  opacity: 0.7;
+}
+
+/* Form Field Styles */
+.form-field {
+  width: 100%;
+  border: 2px solid #ac88a6;
+  border-radius: 6px;
+  /* Remove brower's default outline, so only border color shows */
+  outline: none;
+  padding: 8px;
+  /* Don't set font again, use body font */
+  font-family: inherit;
+}
+
+.form-field:focus {
+  border-color: #5f425b;
+}
+
+textarea.form-field {
+  min-height: 8em;
+  resize: vertical;
+}
+
+/* Button Styles */
+.button {
+  border-radius: 6px;
+  border: 0;
+  background-color: #e0b1d9;
+  padding: 12px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #5f425b;
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 720px) {
+  .flex {
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  header {
+    min-height: 470px;
+  }
+
+  .nav {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+
+  main {
+    padding-top: 20px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+}
